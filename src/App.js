@@ -2,26 +2,26 @@ import React, { Component } from 'react';
 import './App.css';
 import CardList from './components/Card-list/CardList.components';
 import SearchBox from './components/Search-box/search';
-// import USERS from './data/USERS';
+import USERS from './data/USERS';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      monsters: [],
+      monsters: USERS,
       searchField:''
     }
   } 
 
-  componentDidMount () {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        this.setState({monsters: data})
-      })
-    console.log("did mount first")   
-  }
+  // componentDidMount () {
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       this.setState({monsters: data})
+  //     })
+  //   console.log("did mount first")   
+  // }
 
 
 
